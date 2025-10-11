@@ -30,5 +30,6 @@ export interface PlanetProps {
   temperature: string,
   images: Images,
   color: string,
-  borderColor: string
+  borderBottomColor: string
+  borderTopColor: string
 }

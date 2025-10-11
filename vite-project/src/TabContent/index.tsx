@@ -43,7 +43,7 @@ const index: React.FC<ContentProps> = ({ planetDetails, activeTab, toggleHamb })
                         key={key}
                         onClick={() => setSeparateTabs(key)}
                         className={`text-opaq-white text-[0.5625rem] uppercase font-bold font-spartan cursor-pointer relative z-99 transition-all pt-[1rem] pb-[1rem]
-                            ${separateTabs === key ? `${planetDetails[activeTab]?.borderColor} border-b-[4px] text-white` : 'border-0'}
+                            ${separateTabs === key ? `${planetDetails[activeTab]?.borderBottomColor} border-b-[4px] text-white` : 'border-0'}
                             ${toggleHamb ? 'hidden' : 'flex'}
                         `}
                     >

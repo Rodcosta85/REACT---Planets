@@ -2,21 +2,19 @@ import { useState } from "react"
 import HambMenu from './../assets/icon-hamburger.svg'
 import Chevron from './../assets/icon-chevron.svg'
 
-interface PlanetProps {
-    name: string
-}
+import type { PlanetProps } from "../planet"
 
 interface HeaderProps {
     planetDetails: PlanetProps[],
-    activeTab: any
+    activeTab: number,
     setActiveTab: (arg0: number) => void,
     handleMobileTabToggle: (index: any) => void,
     toggleHamb: boolean
 }
 
-const index: React.FC<HeaderProps> = ({ planetDetails, setActiveTab, handleMobileTabToggle, toggleHamb }) => {
+const index: React.FC<HeaderProps> = ({ planetDetails, activeTab, setActiveTab, handleMobileTabToggle, toggleHamb }) => {
     return (
-        <header className="flex desktop:flex-row justify-between items-center pl-[2rem] pt-[1.37rem] pr-[2.56rem] border-b-[1px] border-b-opaq-white
+        <header className="flex desktop:flex-row justify-between items-center desktop:h-[70px] pl-[2rem] pr-[2.56rem] desktop:pt-0 border-b-[1px] border-b-opaq-white
         tablet:flex-col tablet:gap-[2.44rem] tablet:pt-[2rem]
         mobile:flex-row mobile:gap-[2.81rem] mobile:ml-[1.5rem] mobile:mr-[2.25rem] mobile:pl-0 mobile:pr-0 mobile:pb-[1rem]
         ">
@@ -39,7 +37,9 @@ const index: React.FC<HeaderProps> = ({ planetDetails, setActiveTab, handleMobil
                 {planetDetails.map((planet: any, index: number) => (
                     <div key={index}>
                         <button
-                            className='transition-all duration-300 ease-in-out cursor-pointer text-white opacity-[0.6] text-[0.6875rem] font-bold font-spartan uppercase tracking-[0.0625rem]'
+                            className={`transition-all duration-300 ease-in-out cursor-pointer text-white opacity-[0.6] text-[0.6875rem] font-bold font-spartan uppercase tracking-[0.0625rem] pt-[1.37rem]  h-[100%]
+                                ${activeTab === index ? `${planetDetails[activeTab]?.borderTopColor} border-t-[4px]` : 'border-0'} 
+                            `}
                             onClick={() => setActiveTab(index)}
                         >
                             {planet.name}
@@ -47,6 +47,8 @@ const index: React.FC<HeaderProps> = ({ planetDetails, setActiveTab, handleMobil
                     </div>
                 ))}
             </nav>
+
+
 
             {/* esse nav é somente do mobile, visto que ele tem um estilo completamente diferente do que está presente tanto no desktop como no tablet */}
             <nav className={`hidden gap-[2.06rem] ${toggleHamb ? 'mobile:flex' : 'mobile:hidden'} mobile:flex-col mobile:absolute mobile:top-[7rem] mobile:left-0 z-99 w-full pl-[1.5rem] pr-[2.25rem] bg-very-dark-blue`}>

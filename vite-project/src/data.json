@@ -23,7 +23,8 @@
       "geology": "./assets/geology-mercury.png"
     },
     "color": "bg-light-gray",
-    "borderColor": "border-b-light-blue"
+    "borderBottomColor": "border-b-light-blue",
+    "borderTopColor": "border-t-light-blue"
   },
   {
     "name": "Venus",
@@ -49,7 +50,8 @@
       "geology": "./assets/geology-venus.png"
     },
     "color": "bg-light-yellow",
-    "borderColor": "border-b-very-light-orange"
+    "borderBottomColor": "border-b-very-light-orange",
+    "borderTopColor": "border-t-very-light-orange"
   },
   {
     "name": "Earth",
@@ -75,7 +77,8 @@
       "geology": "./assets/geology-earth.png"
     },
     "color": "bg-blueish-purple",
-    "borderColor": "border-b-purple"
+    "borderBottomColor": "border-b-purple",
+    "borderTopColor": "border-t-purple"
   },
   {
     "name": "Mars",
@@ -101,7 +104,8 @@
       "geology": "./assets/geology-mars.png"
     },
     "color": "bg-light-red",
-    "borderColor": "border-b-regular-orange"
+    "borderBottomColor": "border-b-regular-orange",
+    "borderTopColor": "border-t-regular-orange"
   },
   {
     "name": "Jupiter",
@@ -127,7 +131,8 @@
       "geology": "./assets/geology-jupiter.png"
     },
     "color": "bg-light-brown",
-    "borderColor": "border-b-strong-red"
+    "borderBottomColor": "border-b-strong-red",
+    "borderTopColor": "border-t-strong-red"
   },
   {
     "name": "Saturn",
@@ -153,7 +158,8 @@
       "geology": "./assets/geology-saturn.png"
     },
     "color": "bg-saturn-yellow",
-    "borderColor": "border-b-terracota"
+    "borderBottomColor": "border-b-terracota",
+    "borderTopColor": "border-t-terracota"
   },
   {
     "name": "Uranus",
@@ -179,7 +185,8 @@
       "geology": "./assets/geology-uranus.png"
     },
     "color": "bg-uranus-aqua",
-    "borderColor": "border-b-aqua-green"
+    "borderBottomColor": "border-b-aqua-green",
+    "borderTopColor": "border-t-aqua-green"
   },
   {
     "name": "Neptune",
@@ -205,6 +212,7 @@
       "geology": "./assets/geology-neptune.png"
     },
     "color": "bg-neptune-blue",
-    "borderColor": "border-b-regular-blue"
+    "borderBottomColor": "border-b-regular-blue",
+    "borderTopColor": "border-t-regular-blue"
   }
 ]

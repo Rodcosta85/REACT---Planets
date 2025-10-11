@@ -36,7 +36,7 @@ const index: React.FC<ContentProps> = ({ planetDetails, activeTab, toggleHamb })
 
 
     return (
-        <div className='flex flex-col desktop:hidden tablet:hidden'>
+        <div className='flex flex-col'>
             <nav className='desktop:hidden tablet:hidden mobile:flex justify-between gap-[2.69rem] h-[3rem] ml-[1.5rem] mr-[2.25rem]'>
                 {sectionKeys.map((key) => (
                     <button

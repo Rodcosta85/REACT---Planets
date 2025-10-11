@@ -3,12 +3,9 @@ import { useState } from 'react'
 // import do json
 import Data from './data.json';
 
-// import de imagens/assets
-import Stars from './assets/background-stars.svg'
-
 // import de componentes
 import Header from './Header'
-import MobileContent from './MobileContent'
+import TabContent from './TabContent'
 
 import type { PlanetProps } from './planet'
 
@@ -29,7 +26,7 @@ function App() {
 
   return (
     <div className='bg-very-dark-blue bg-[url(assets/background-stars.svg)] w-full h-[100vh] relative'>
-      {/* <img src={Stars} alt="background pattern of stars " className='absolute top-0 left-0 z-1 w-[100vw] h-[100vh] object-cover' /> */}
+  
       <Header
         planetDetails={planetDetails}
         activeTab={activeTab}
@@ -40,11 +37,10 @@ function App() {
 
       {/* conteudo de cada tab/planeta */}
       <div>
-        <p className='text-white mobile:hidden'>{planetDetails[activeTab]?.overview?.content}</p>
 
 
         {/* conteúdo somente do mobile */}
-        <MobileContent
+        <TabContent
           planetDetails={planetDetails}
           activeTab={activeTab}
           setActiveTab={setActiveTab}

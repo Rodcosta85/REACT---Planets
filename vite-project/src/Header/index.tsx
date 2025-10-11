@@ -10,33 +10,30 @@ interface HeaderProps {
     planetDetails: PlanetProps[],
     activeTab: any
     setActiveTab: (arg0: number) => void,
+    handleMobileTabToggle: (index: any) => void,
+    toggleHamb: boolean
 }
 
-const index: React.FC<HeaderProps> = ({ planetDetails, setActiveTab }) => {
-
-    const [toggleHamb, setToggleHamb] = useState<boolean>(false);
-
-    const handleMobileTabToggle = (index: any) => {
-        setActiveTab(index);
-        setToggleHamb(prevState => !prevState);
-    }
-
+const index: React.FC<HeaderProps> = ({ planetDetails, setActiveTab, handleMobileTabToggle, toggleHamb }) => {
     return (
-        <header className="flex desktop:flex-row justify-between items-center pl-[2rem] pt-[1.37rem] pr-[2.56rem]
+        <header className="flex desktop:flex-row justify-between items-center pl-[2rem] pt-[1.37rem] pr-[2.56rem] border-b-[1px] border-b-opaq-white
         tablet:flex-col tablet:gap-[2.44rem] tablet:pt-[2rem]
-        mobile:flex-row
+        mobile:flex-row mobile:gap-[2.81rem] mobile:ml-[1.5rem] mobile:mr-[2.25rem] mobile:pl-0 mobile:pr-0 mobile:pb-[1rem]
         ">
-            <h1 className="font-antonio text-[1.75rem] text-white tracking-[-0.065rem]">THE PLANETS</h1>
-            <button
-                onClick={handleMobileTabToggle}
-                className="w-[1.5rem] h-[1rem] relative z-99 desktop:hidden tablet:hidden mobile:block"
-            >
-                <img
-                    src={HambMenu}
-                    alt="a hamburger-style menu"
-                    className=" mobile:w-[1.5rem] mobile:h-[1rem]"
-                />
-            </button>
+            <div className="flex items-center desktop:justify-between tablet:justify-center mobile:justify-between w-full">
+                <h1 className="font-antonio text-[1.75rem] text-white tracking-[-0.065rem]">THE PLANETS</h1>
+                <button
+                    onClick={handleMobileTabToggle}
+                    className="w-[1.5rem] h-[1rem] relative z-99 desktop:hidden tablet:hidden mobile:block"
+                >
+                    <img
+                        src={HambMenu}
+                        alt="a hamburger-style menu"
+                        className=" mobile:w-[1.5rem] mobile:h-[1rem]"
+                    />
+                </button>
+            </div>
+
             <nav className='desktop:flex tablet:flex flex-row gap-[2.06rem] mobile:hidden'>
                 {/* map para mostrar todos os nomes dos planetas e colocá-los dentro de um botão para usar o sistema de tab */}
                 {planetDetails.map((planet: any, index: number) => (
@@ -64,7 +61,6 @@ const index: React.FC<HeaderProps> = ({ planetDetails, setActiveTab }) => {
                             <div className={`w-[1.25rem] h-[1.25rem] rounded-full ${planet.color}`}></div>
                             <h2
                                 className='text-white text-[0.9375rem] font-bold font-spartan uppercase tracking-[0.0625rem]'
-                                
                             >
                                 {planet.name}
                             </h2>

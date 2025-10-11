@@ -36,21 +36,23 @@ const index: React.FC<ContentProps> = ({ planetDetails, activeTab, toggleHamb })
 
 
     return (
-        <div className='flex flex-col mobile:hidden'>
+        <div className='flex flex-col desktop:hidden tablet:hidden'>
             <nav className='desktop:hidden tablet:hidden mobile:flex justify-between gap-[2.69rem] h-[3rem] ml-[1.5rem] mr-[2.25rem]'>
                 {sectionKeys.map((key) => (
                     <button
                         key={key}
                         onClick={() => setSeparateTabs(key)}
                         className={`text-opaq-white text-[0.5625rem] uppercase font-bold font-spartan cursor-pointer relative z-99 transition-all pt-[1rem] pb-[1rem]
-                            ${separateTabs === key ? 'border-blue-300 border-b-[4px] text-white' : 'border-0'}
+                            ${separateTabs === key ? `${planetDetails[activeTab]?.borderColor} border-b-[4px] text-white` : 'border-0'}
                             ${toggleHamb ? 'hidden' : 'flex'}
-                            `}
+                        `}
                     >
                         {key.charAt(0).toUpperCase() + key.slice(1)}
                     </button>
                 ))}
             </nav>
+
+            
 
             {/* contém o nome do planeta, descrição (dependendo da tab selecionada entre as 3) e a fonte da informação */}
             <SourceP

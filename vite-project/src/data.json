@@ -22,7 +22,8 @@
       "internal": "./assets/planet-mercury-internal.svg",
       "geology": "./assets/geology-mercury.png"
     },
-    "color": "bg-light-gray"
+    "color": "bg-light-gray",
+    "borderColor": "border-b-light-blue"
   },
   {
     "name": "Venus",
@@ -47,7 +48,8 @@
       "internal": "./assets/planet-venus-internal.svg",
       "geology": "./assets/geology-venus.png"
     },
-    "color": "bg-light-yellow"
+    "color": "bg-light-yellow",
+    "borderColor": "border-b-very-light-orange"
   },
   {
     "name": "Earth",
@@ -72,7 +74,8 @@
       "internal": "./assets/planet-earth-internal.svg",
       "geology": "./assets/geology-earth.png"
     },
-    "color": "bg-blueish-purple"
+    "color": "bg-blueish-purple",
+    "borderColor": "border-b-purple"
   },
   {
     "name": "Mars",
@@ -97,7 +100,8 @@
       "internal": "./assets/planet-mars-internal.svg",
       "geology": "./assets/geology-mars.png"
     },
-    "color": "bg-light-red"
+    "color": "bg-light-red",
+    "borderColor": "border-b-regular-orange"
   },
   {
     "name": "Jupiter",
@@ -122,7 +126,8 @@
       "internal": "./assets/planet-jupiter-internal.svg",
       "geology": "./assets/geology-jupiter.png"
     },
-    "color": "bg-light-brown"
+    "color": "bg-light-brown",
+    "borderColor": "border-b-strong-red"
   },
   {
     "name": "Saturn",
@@ -147,7 +152,8 @@
       "internal": "./assets/planet-saturn-internal.svg",
       "geology": "./assets/geology-saturn.png"
     },
-    "color": "bg-saturn-yellow"
+    "color": "bg-saturn-yellow",
+    "borderColor": "border-b-terracota"
   },
   {
     "name": "Uranus",
@@ -172,7 +178,8 @@
       "internal": "./assets/planet-uranus-internal.svg",
       "geology": "./assets/geology-uranus.png"
     },
-    "color": "bg-uranus-aqua"
+    "color": "bg-uranus-aqua",
+    "borderColor": "border-b-aqua-green"
   },
   {
     "name": "Neptune",
@@ -197,6 +204,7 @@
       "internal": "./assets/planet-neptune-internal.svg",
       "geology": "./assets/geology-neptune.png"
     },
-    "color": "bg-neptune-blue"
+    "color": "bg-neptune-blue",
+    "borderColor": "border-b-regular-blue"
   }
 ]

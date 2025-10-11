@@ -8,14 +8,33 @@
     --color-dark-gray: #38384F;
     --color-medium-gray: #838391;
     --color-light-gray: #DEF4FC;
-    --color-light-blue: #419EBB;
+
+
+        /* mercury border  */
+    --color-light-blue: #419EBB; 
+ 
+        /* venus border */
     --color-very-light-orange: #EDA249;
-    --color-regular-orange: #D14C32;
+
+    /* earth border  */
     --color-purple: #6f2ed6;
+
+        /* mars border */
+    --color-regular-orange: #D14C32;
+    
+        /* jupiter border  */
     --color-strong-red: #D83A34;
+
+        /* saturn border  */
     --color-terracota: #CD5120;
+
+        /* uranus border */
     --color-aqua-green: #1ec2a4;
+
+        /* neptune border */
     --color-regular-blue: #2d68f0;
+
+
     --color-light-yellow: #F7CC7F;
     --color-blueish-purple: #545BFE;
     --color-light-red: #FF6A45;

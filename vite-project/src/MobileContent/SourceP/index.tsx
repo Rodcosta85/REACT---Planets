@@ -23,7 +23,7 @@ const index:React.FC<SourceProps> = ({ planetDetails, activeTab, separateTabs, s
                     <span>
                         <a
                             href={sections[separateTabs]?.source}
-                            className='flex items-center gap-[3px] underline cursor:pointer'
+                            className='flex items-center gap-[3px] font-bold underline cursor:pointer'
                         >
                             Wikipedia
                             <img

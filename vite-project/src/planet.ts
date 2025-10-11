@@ -29,5 +29,6 @@ export interface PlanetProps {
   radius: string,
   temperature: string,
   images: Images,
-  color: string
+  color: string,
+  borderColor: string
 }

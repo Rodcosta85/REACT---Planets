@@ -1,34 +1,63 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Data from './data.json';
+
+interface Overview {
+  content: string,
+  source: string
+}
+
+interface Structure {
+  content: string,
+  source: string
+}
+
+interface GeologyProps {
+  content: string,
+  source: string
+}
+
+interface Images {
+  planet: string,
+  internal: string,
+  geology: string
+}
+
+interface PlanetProps {
+  name: string,
+  overview: Overview,
+  structure: Structure,
+  geology: GeologyProps,
+  rotation: string,
+  revolution: string,
+  radius: string, 
+  temperature: string,
+  images: Images
+}
 
 function App() {
-  const [count, setCount] = useState(0)
 
+  // estado/array que guarda as informações que vem do json (Data) levando em consideração a tipificação feita anteriormente com as interfaces
+  const [planetDetails] = useState<PlanetProps[]>(Data);
+
+  // estado que guarda o número das tabs para transformamos o nav em um sistema dinâmico de tabs
+  const [activeTab, setActiveTab] = useState<number>(0)
+ 
   return (
-    <>
+    <div>
+      <nav className='flex flex-row gap-1'>
+        {planetDetails.map((planet, index) => (
+        <div key={index}>
+            <button
+            className='transition-all duration-300 ease-in-out cursor-pointer rounded-[6px] bg-blue-300'
+            onClick={() => setActiveTab(index)}
+            >{planet.name}</button>
+        </div>
+      ))}
+      </nav>
       <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        <p>{planetDetails[activeTab].overview.content}</p>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </div>
   )
 }
 

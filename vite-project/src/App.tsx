@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import Data from './data.json';
+import Header from './Header'
+import Stars from './assets/background-stars.svg'
 
 interface Overview {
   content: string,
@@ -29,7 +31,7 @@ interface PlanetProps {
   geology: GeologyProps,
   rotation: string,
   revolution: string,
-  radius: string, 
+  radius: string,
   temperature: string,
   images: Images
 }
@@ -41,21 +43,18 @@ function App() {
 
   // estado que guarda o número das tabs para transformamos o nav em um sistema dinâmico de tabs
   const [activeTab, setActiveTab] = useState<number>(0)
- 
+
   return (
-    <div>
-      <nav className='flex flex-row gap-1'>
-        {planetDetails.map((planet, index) => (
-        <div key={index}>
-            <button
-            className='transition-all duration-300 ease-in-out cursor-pointer rounded-[6px] bg-blue-300'
-            onClick={() => setActiveTab(index)}
-            >{planet.name}</button>
-        </div>
-      ))}
-      </nav>
+    <div className='bg-very-dark-blue w-full h-[100vh] relative'>
+      <img src={Stars} alt="background pattern of stars " className='absolute top-0 left-0 z-1 w-[100vw] h-[100vh] object-cover'/>
+      <Header
+        planetDetails={planetDetails}
+        activeTab={activeTab}
+        setActiveTab={setActiveTab}
+      />
+      {/* conteudo de cada tab/planeta */}
       <div>
-        <p>{planetDetails[activeTab].overview.content}</p>
+        <p className='text-white'>{planetDetails[activeTab]?.overview?.content}</p>
       </div>
     </div>
   )

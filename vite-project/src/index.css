@@ -1,1 +1,39 @@
 @import "tailwindcss";
+
+@theme {
+
+    /* cores */
+    --color-opaq-white: rgba(255, 255, 255, 0.6);
+    --color-very-dark-blue: #070724;
+    --color-dark-gray: #38384F;
+    --color-medium-gray: #838391;
+    --color-light-gray: #DEF4FC;
+    --color-light-blue: #419EBB;
+    --color-very-light-orange: #EDA249;
+    --color-regular-orange: #D14C32;
+    --color-purple: #6f2ed6;
+    --color-strong-red: #D83A34;
+    --color-terracota: #CD5120;
+    --color-aqua-green: #1ec2a4;
+    --color-regular-blue: #2d68f0;
+    --color-light-yellow: #F7CC7F;
+    --color-blueish-purple: #545BFE;
+    --color-light-red: #FF6A45;
+    --color-light-brown: #ECAD7A;
+    --color-saturn-yellow: #FCCB6B;
+    --color-uranus-aqua: #65F0D5;
+    --color-neptune-blue: #497EFA;
+
+
+    /* fontes */
+    --font-spartan: "League Spartan", sans-serif;
+    --font-antonio: "Antonio", sans-serif;
+
+    /* tipografia */
+    
+
+    /* breakpoints */
+    --breakpoint-desktop: 1024px;
+    --breakpoint-tablet: 768px;
+    --breakpoint-mobile: 160px;
+}

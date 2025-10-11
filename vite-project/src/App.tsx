@@ -28,7 +28,7 @@ function App() {
   }
 
   return (
-    <div className='bg-very-dark-blue w-full h-[100vh] relative'>
+    <div className='bg-very-dark-blue bg-[url(assets/background-stars.svg)] w-full h-[100vh] relative'>
       {/* <img src={Stars} alt="background pattern of stars " className='absolute top-0 left-0 z-1 w-[100vw] h-[100vh] object-cover' /> */}
       <Header
         planetDetails={planetDetails}

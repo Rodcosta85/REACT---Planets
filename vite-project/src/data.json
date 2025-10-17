@@ -24,7 +24,8 @@
     },
     "color": "bg-light-gray",
     "borderBottomColor": "border-b-light-blue",
-    "borderTopColor": "border-t-light-blue"
+    "borderTopColor": "border-t-light-blue",
+    "backgroundColor": "bg-light-blue"
   },
   {
     "name": "Venus",
@@ -51,7 +52,8 @@
     },
     "color": "bg-light-yellow",
     "borderBottomColor": "border-b-very-light-orange",
-    "borderTopColor": "border-t-very-light-orange"
+    "borderTopColor": "border-t-very-light-orange",
+    "backgroundColor": "bg-very-light-orange"
   },
   {
     "name": "Earth",
@@ -78,7 +80,8 @@
     },
     "color": "bg-blueish-purple",
     "borderBottomColor": "border-b-purple",
-    "borderTopColor": "border-t-purple"
+    "borderTopColor": "border-t-purple",
+    "backgroundColor": "bg-purple"
   },
   {
     "name": "Mars",
@@ -105,7 +108,8 @@
     },
     "color": "bg-light-red",
     "borderBottomColor": "border-b-regular-orange",
-    "borderTopColor": "border-t-regular-orange"
+    "borderTopColor": "border-t-regular-orange",
+    "backgroundColor": "bg-regular-orange"
   },
   {
     "name": "Jupiter",
@@ -132,7 +136,8 @@
     },
     "color": "bg-light-brown",
     "borderBottomColor": "border-b-strong-red",
-    "borderTopColor": "border-t-strong-red"
+    "borderTopColor": "border-t-strong-red",
+    "backgroundColor": "bg-strong-red"
   },
   {
     "name": "Saturn",
@@ -159,7 +164,8 @@
     },
     "color": "bg-saturn-yellow",
     "borderBottomColor": "border-b-terracota",
-    "borderTopColor": "border-t-terracota"
+    "borderTopColor": "border-t-terracota",
+    "backgroundColor": "bg-terracota"
   },
   {
     "name": "Uranus",
@@ -186,7 +192,8 @@
     },
     "color": "bg-uranus-aqua",
     "borderBottomColor": "border-b-aqua-green",
-    "borderTopColor": "border-t-aqua-green"
+    "borderTopColor": "border-t-aqua-green",
+    "backgroundColor": "bg-aqua-green"
   },
   {
     "name": "Neptune",
@@ -213,6 +220,7 @@
     },
     "color": "bg-neptune-blue",
     "borderBottomColor": "border-b-regular-blue",
-    "borderTopColor": "border-t-regular-blue"
+    "borderTopColor": "border-t-regular-blue",
+    "backgroundColor": "bg-regular-blue"
   }
 ]

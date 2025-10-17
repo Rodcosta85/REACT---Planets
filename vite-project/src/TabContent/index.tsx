@@ -36,7 +36,7 @@ const index: React.FC<ContentProps> = ({ planetDetails, activeTab, toggleHamb })
 
 
     return (
-        <div className='flex flex-col'>
+        <div className='flex flex-col gap-[5.44rem]'>
             <nav className='desktop:hidden tablet:hidden mobile:flex justify-between gap-[2.69rem] h-[3rem] ml-[1.5rem] mr-[2.25rem]'>
                 {sectionKeys.map((key) => (
                     <button
@@ -59,7 +59,9 @@ const index: React.FC<ContentProps> = ({ planetDetails, activeTab, toggleHamb })
                 planetDetails={planetDetails}
                 sections={sections}
                 separateTabs={separateTabs}
+                setSeparateTabs={setSeparateTabs}
                 activeTab={activeTab}
+                sectionKeys={sectionKeys}
             />
 
             <Statistics

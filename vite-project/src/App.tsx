@@ -25,7 +25,10 @@ function App() {
   }
 
   return (
-    <div className='bg-very-dark-blue bg-[url(assets/background-stars.svg)] w-full h-[100vh] relative'>
+    <div className='bg-very-dark-blue bg-[url(assets/background-stars.svg)] w-full h-[100vh] relative pb-[3.5rem]
+    tablet:h-full
+    mobile:h-full
+    '>
   
       <Header
         planetDetails={planetDetails}

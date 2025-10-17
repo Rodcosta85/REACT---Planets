@@ -31,5 +31,6 @@ export interface PlanetProps {
   images: Images,
   color: string,
   borderBottomColor: string
-  borderTopColor: string
+  borderTopColor: string,
+  backgroundColor: string
 }

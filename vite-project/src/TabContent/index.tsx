@@ -37,8 +37,15 @@ const index: React.FC<ContentProps> = ({ planetDetails, activeTab, toggleHamb })
 
 
     return (
-        <div className='flex flex-col gap-[5.44rem]'>
-            <nav className='desktop:hidden tablet:hidden mobile:flex justify-between gap-[2.69rem] h-[3rem] ml-[1.5rem] mr-[2.25rem]'>
+        <div className='flex flex-col 
+        desktop:gap-[5.44rem]
+        tablet:gap-[3.5rem]
+        mobile:gap-[2rem]
+        '>
+            <nav className={
+                `desktop:hidden tablet:hidden mobile:flex justify-between gap-[2.69rem] h-[3rem] pl-[1.5rem] pr-[2.25rem] border-t-[1px] border-t-opaq-white 
+                ${toggleHamb ? 'border-b-0 border-b-opaq-white' : 'border-b-[1px] border-b-opaq-white' } `
+            }>
                 {sectionKeys.map((key) => (
                     <button
                         key={key}

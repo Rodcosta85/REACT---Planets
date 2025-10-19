@@ -14,9 +14,9 @@ interface HeaderProps {
 
 const index: React.FC<HeaderProps> = ({ planetDetails, activeTab, setActiveTab, handleMobileTabToggle, toggleHamb }) => {
     return (
-        <header className="flex desktop:flex-row justify-between items-center desktop:h-[70px] pl-[2rem] pr-[2.56rem] desktop:pt-0 border-b-[1px] border-b-opaq-white
+        <header className="flex desktop:flex-row justify-between items-center desktop:h-[70px] pl-[2rem] pr-[2.56rem] desktop:pt-0 
         tablet:flex-col tablet:gap-[2.44rem] tablet:pt-[2rem]
-        mobile:flex-row mobile:gap-[2.81rem] mobile:ml-[1.5rem] mobile:mr-[2.25rem] mobile:pl-0 mobile:pr-0 mobile:pb-[1rem]
+        mobile:flex-row mobile:gap-[2.81rem] mobile:pt-[0.5rem] mobile:pl-[1.5rem] mobile:pr-[2.25rem] mobile:pb-[1rem]
         ">
             <div className="flex items-center desktop:justify-between tablet:justify-center mobile:justify-between w-full">
                 <h1 className="font-antonio text-[1.75rem] text-white tracking-[-0.065rem]">THE PLANETS</h1>
@@ -51,7 +51,7 @@ const index: React.FC<HeaderProps> = ({ planetDetails, activeTab, setActiveTab, 
 
 
             {/* esse nav é somente do mobile, visto que ele tem um estilo completamente diferente do que está presente tanto no desktop como no tablet */}
-            <nav className={`hidden gap-[2.06rem] ${toggleHamb ? 'mobile:flex' : 'mobile:hidden'} mobile:flex-col mobile:absolute mobile:top-[7rem] mobile:left-0 z-99 w-full pl-[1.5rem] pr-[2.25rem] bg-very-dark-blue`}>
+            <nav className={`hidden gap-[2.06rem] ${toggleHamb ? 'mobile:flex' : 'mobile:hidden'} mobile:flex-col mobile:absolute mobile:top-[6.5rem] mobile:left-0 z-99 w-full pl-[1.5rem] pr-[2.25rem] bg-very-dark-blue`}>
                 {/* map para mostrar todos os nomes dos planetas e colocá-los dentro de um botão para usar o sistema de tab */}
                 {planetDetails.map((planet: any, index: number) => (
                     <button

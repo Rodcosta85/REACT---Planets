@@ -31,7 +31,7 @@ const index: React.FC<SourceProps> = ({ planetDetails, activeTab, separateTabs, 
 
     return (
         <div className='flex desktop:flex-row justify-center desktop:gap-[18.69rem] desktop:pl-[1.5rem] desktop:pr-[2.25rem] desktop:pt-[7.94rem] w-[100%]
-        tablet:flex-col tablet:gap-[5rem] tablet:pt-[5rem] tablet:pl-[2.5rem] tablet:pr-[2.5rem]
+        tablet:flex-col tablet:gap-[5rem] tablet:pt-[3rem] tablet:pl-[2.5rem] tablet:pr-[2.5rem]
         mobile:flex-col mobile:items-center mobile:gap-[2.75rem] mobile:pt-0
         '>
             <img

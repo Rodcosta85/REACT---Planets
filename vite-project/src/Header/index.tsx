@@ -14,7 +14,8 @@ interface HeaderProps {
 
 const index: React.FC<HeaderProps> = ({ planetDetails, activeTab, setActiveTab, handleMobileTabToggle, toggleHamb }) => {
     return (
-        <header className="flex desktop:flex-row justify-between items-center desktop:h-[70px] pl-[2rem] pr-[2.56rem] desktop:pt-0 
+        <header className="flex desktop:flex-row justify-between items-center 
+        desktop:justify-center desktop:h-[70px] pl-[2rem] pr-[2.56rem] desktop:pt-0 
         tablet:flex-col tablet:gap-[2.44rem] tablet:pt-[2rem]
         mobile:flex-row mobile:gap-[2.81rem] mobile:pt-[0.5rem] mobile:pl-[1.5rem] mobile:pr-[2.25rem] mobile:pb-[1rem]
         ">

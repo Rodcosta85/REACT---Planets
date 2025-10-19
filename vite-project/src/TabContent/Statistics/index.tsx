@@ -14,6 +14,9 @@ interface StatsProps {
 
 const index: React.FC<StatsProps> = ({ planetDetails, activeTab }) => {
 
+
+
+
     return (
         <div className='flex flex-col justify-between items-center gap-[0.5rem] mobile:pl-[1.5rem] mobile:pr-[2.25rem]
         desktop:flex-row desktop:justify-center desktop:gap-[1.88rem] desktop:pl-[2rem] desktop:pr-[2rem]

@@ -8,17 +8,26 @@ import Jupiter from './../../assets/planet-jupiter.svg'
 
 import type { PlanetProps } from '../../planet'
 
+interface ImageProps {
+    planet: string,
+    internal: string,
+    geology: string
+}
+
+
 interface SourceProps {
     separateTabs: string,
     setSeparateTabs: any,
     sections: any
     planetDetails: PlanetProps[]
     activeTab: number,
-    sectionKeys: ReadonlyArray<string>
+    sectionKeys: ReadonlyArray<string>,
+    currentPlanet: any
 }
 
-const index: React.FC<SourceProps> = ({ planetDetails, activeTab, separateTabs, setSeparateTabs, sections, sectionKeys }) => {
 
+
+const index: React.FC<SourceProps> = ({ planetDetails, activeTab, separateTabs, setSeparateTabs, sections, sectionKeys, currentPlanet }) => {
 
     return (
         <div className='flex desktop:flex-row justify-center desktop:gap-[18.69rem] desktop:pl-[1.5rem] desktop:pr-[2.25rem] desktop:pt-[7.94rem] w-[100%]
@@ -34,7 +43,7 @@ const index: React.FC<SourceProps> = ({ planetDetails, activeTab, separateTabs, 
                 '
             />
             <aside className='flex desktop:flex-col tablet:flex-row desktop:gap-[2.44rem] gap-[1.5rem] tablet:gap-[4.31rem] mobile:items-center tablet:items-start desktop:w-[21.88rem] w-full'>
-                
+
                 <div className='flex flex-col gap-[1rem] justify-start tablet:justify-between'>
                     <h1 className='text-white text-[2.5rem] desktop:text-left tablet:text-left mobile:text-center font-antonio uppercase'>{planetDetails[activeTab]?.name}</h1>
                     <p className='text-opaq-white text-[0.875rem] text-left tablet:text-left mobile:text-center font-spartan desktop:w-[21.875rem] tablet:w-[21.1875rem]  desktop:h-[9.38rem]'>{sections[separateTabs]?.content}</p>

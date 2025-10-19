@@ -35,6 +35,7 @@ const index: React.FC<ContentProps> = ({ planetDetails, activeTab, toggleHamb })
         }, {} as Record<(typeof sectionKeys)[number], SectionData>);
 
 
+
     return (
         <div className='flex flex-col gap-[5.44rem]'>
             <nav className='desktop:hidden tablet:hidden mobile:flex justify-between gap-[2.69rem] h-[3rem] ml-[1.5rem] mr-[2.25rem]'>
@@ -52,7 +53,7 @@ const index: React.FC<ContentProps> = ({ planetDetails, activeTab, toggleHamb })
                 ))}
             </nav>
 
-            
+
 
             {/* contém o nome do planeta, descrição (dependendo da tab selecionada entre as 3) e a fonte da informação */}
             <SourceP
@@ -62,6 +63,7 @@ const index: React.FC<ContentProps> = ({ planetDetails, activeTab, toggleHamb })
                 setSeparateTabs={setSeparateTabs}
                 activeTab={activeTab}
                 sectionKeys={sectionKeys}
+                currentPlanet={currentPlanet}
             />
 
             <Statistics

@@ -44,10 +44,16 @@ const index: React.FC<SourceProps> = ({ planetDetails, activeTab, separateTabs, 
             />
             <aside className='flex desktop:flex-col tablet:flex-row desktop:gap-[2.44rem] gap-[1.5rem] tablet:gap-[4.31rem] mobile:items-center tablet:items-start desktop:w-[21.88rem] w-full'>
 
-                <div className='flex flex-col gap-[1rem] justify-start tablet:justify-between'>
+                <div className='flex flex-col gap-[1rem] justify-start 
+                tablet:justify-between
+                mobile:pl-[1.5rem] mobile:pr-[1.5rem]
+                '>
                     <h1 className='text-white text-[2.5rem] desktop:text-left tablet:text-left mobile:text-center font-antonio uppercase'>{planetDetails[activeTab]?.name}</h1>
                     <p className='text-opaq-white text-[0.875rem] text-left tablet:text-left mobile:text-center font-spartan desktop:w-[21.875rem] tablet:w-[21.1875rem]  desktop:h-[9.38rem]'>{sections[separateTabs]?.content}</p>
-                    <div className='flex justify-start items-center gap-[4px] text-opaq-white text-[0.75rem] font-spartan'>
+                    <div className='flex desktop:justify-start items-center gap-[4px] text-opaq-white text-[0.75rem] font-spartan
+                    tablet:justify-start
+                    mobile:justify-center
+                    '>
                         <p>Source:</p>
                         <span>
                             <a

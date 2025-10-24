@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 // componentes
-import SourceP from './SourceP'
+import SourceP from '../../public'
 import Statistics from './Statistics'
 
 // tipificação

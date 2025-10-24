@@ -1,8 +1,8 @@
 // imagens/assets
-import SourceImg from './../../assets/icon-source.svg'
+import SourceImg from './icon-source.svg'
 
 // importação da tipificação
-import type { PlanetProps } from '../../planet'
+import type { PlanetProps } from '../src/planet'
 
 
 // tipificação das props recebidas pelo componente
@@ -58,6 +58,7 @@ const index: React.FC<SourceProps> = ({
             </div>
             <aside className='flex desktop:flex-col tablet:flex-row desktop:gap-[2.44rem] gap-[1.5rem] tablet:gap-[4.31rem] mobile:items-center tablet:items-start desktop:w-[21.88rem] w-full'>
                 <div className='flex flex-col gap-[1rem] justify-start 
+                desktop:p-0
                 tablet:justify-between
                 mobile:pl-[1.5rem] mobile:pr-[1.5rem]
                 '>

@@ -26,7 +26,7 @@ function App() {
   }
 
   return (
-    <div className='bg-very-dark-blue bg-[url(assets/background-stars.svg)] w-full desktop:h-[100vh] relative pb-[3.5rem]
+    <div className='bg-very-dark-blue bg-[url(/background-stars.svg)] w-full desktop:h-[100vh] relative pb-[3.5rem]
     tablet:h-full
     mobile:h-full
     '>

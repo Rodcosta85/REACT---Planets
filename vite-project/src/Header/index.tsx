@@ -2,7 +2,7 @@
 import HambBtn from './HambBtn';
 
 // assets
-import Chevron from './../assets/icon-chevron.svg'
+import Chevron from './../../public/icon-chevron.svg'
 
 // importação da tipificação
 import type { PlanetProps } from "../planet"

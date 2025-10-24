@@ -4,6 +4,7 @@ import HambBtn from './HambBtn';
 // assets
 import Chevron from './../assets/icon-chevron.svg'
 
+// importação da tipificação
 import type { PlanetProps } from "../planet"
 
 interface HeaderProps {
@@ -28,7 +29,6 @@ const index: React.FC<HeaderProps> = ({ planetDetails, activeTab, setActiveTab, 
                     toggleHamb={toggleHamb}
                 />
             </div>
-
             <nav className='desktop:flex tablet:flex flex-row gap-[2.06rem] mobile:hidden'>
                 {/* map para mostrar todos os nomes dos planetas e colocá-los dentro de um botão para usar o sistema de tab */}
                 {planetDetails.map((planet: any, index: number) => (
@@ -45,10 +45,12 @@ const index: React.FC<HeaderProps> = ({ planetDetails, activeTab, setActiveTab, 
                 ))}
             </nav>
 
-
-
             {/* esse nav é somente do mobile, visto que ele tem um estilo completamente diferente do que está presente tanto no desktop como no tablet */}
-            <nav className={`hidden gap-[2.06rem] ${toggleHamb ? 'mobile:flex' : 'mobile:hidden'} mobile:flex-col mobile:absolute mobile:top-[6.5rem] mobile:left-0 z-99 w-full pl-[1.5rem] pr-[2.25rem] bg-very-dark-blue`}>
+            <nav className={`
+            hidden gap-[2.06rem] 
+            z-99 w-full h-[100vh] pl-[1.5rem] pr-[2.25rem] bg-very-dark-blue    
+            ${toggleHamb ? 'mobile:flex' : 'mobile:hidden'} mobile:flex-col mobile:absolute mobile:top-[6.5rem] mobile:left-0 
+            `}>
                 {/* map para mostrar todos os nomes dos planetas e colocá-los dentro de um botão para usar o sistema de tab */}
                 {planetDetails.map((planet: any, index: number) => (
                     <button

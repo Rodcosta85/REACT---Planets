@@ -15,11 +15,9 @@ interface StatsProps {
 
 const index: React.FC<StatsProps> = ({ planetDetails, activeTab, toggleHamb }) => {
 
-
-
-
     return (
-        <div className={`flex flex-col justify-between items-start gap-[0.5rem] mobile:pl-[1.5rem] mobile:pr-[2.25rem]
+        <div className={`
+        flex flex-col justify-between items-start gap-[0.5rem] mobile:pl-[1.5rem] mobile:pr-[2.25rem]
         desktop:flex-row desktop:justify-center desktop:gap-[1.88rem] desktop:pl-[2rem] desktop:pr-[2rem]
         tablet:flex-row tablet:pl-[2.5rem] tablet:pr-[2.5rem]
         ${toggleHamb ? 'hidden' : 'flex' }
@@ -39,7 +37,8 @@ const index: React.FC<StatsProps> = ({ planetDetails, activeTab, toggleHamb }) =
                 desktop:text-[2.5rem]
                 tablet:text-[1.5rem]
                 '>
-                    {planetDetails[activeTab]?.rotation} </h3>
+                    {planetDetails[activeTab]?.rotation} 
+                </h3>
             </div>
 
             <div className='flex justify-between items-center w-full min-h-[3rem] border-opaq-white border-[1px] pl-[1.5rem] pr-[1.5rem] pt-[1rem] pb-[1rem]

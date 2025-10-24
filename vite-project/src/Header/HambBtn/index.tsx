@@ -4,9 +4,7 @@ interface ButtonProps {
 }
 
 const index: React.FC<ButtonProps> = ({ handleMobileTabToggle, toggleHamb }) => {
-
-
-
+  
   return (
     <button
       onClick={handleMobileTabToggle}

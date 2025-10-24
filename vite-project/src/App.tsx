@@ -20,7 +20,6 @@ function App() {
   // estado que guarda o estado do botão para fazer o nav específico do mobile aparecer
   const [toggleHamb, setToggleHamb] = useState<boolean>(false);
 
-
   const handleMobileTabToggle = (index: any) => {
     setActiveTab(index);
     setToggleHamb(prevState => !prevState);
@@ -31,7 +30,6 @@ function App() {
     tablet:h-full
     mobile:h-full
     '>
-  
       <Header
         planetDetails={planetDetails}
         activeTab={activeTab}
@@ -39,22 +37,13 @@ function App() {
         handleMobileTabToggle={handleMobileTabToggle}
         toggleHamb={toggleHamb}
       />
-
       {/* conteudo de cada tab/planeta */}
-      <div>
-
-
-        {/* conteúdo somente do mobile */}
-        <TabContent
-          planetDetails={planetDetails}
-          activeTab={activeTab}
-          setActiveTab={setActiveTab}
-          toggleHamb={toggleHamb}
-        />
-        {/* conteúdo somente do mobile */}
-
-
-      </div>
+      <TabContent
+        planetDetails={planetDetails}
+        activeTab={activeTab}
+        setActiveTab={setActiveTab}
+        toggleHamb={toggleHamb}
+      />
       {/* conteudo de cada tab/planeta */}
 
     </div>

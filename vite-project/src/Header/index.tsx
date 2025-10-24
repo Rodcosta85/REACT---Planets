@@ -1,9 +1,12 @@
+<<<<<<< HEAD
 import { useState } from "react"
 
 // components
 import HambBtn from './HambBtn';
 
 // assets
+=======
+>>>>>>> 8b608f894d55e1ad706d587ef969cf43bf99092a
 import HambMenu from './../assets/icon-hamburger.svg'
 import Chevron from './../assets/icon-chevron.svg'
 

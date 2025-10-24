@@ -14,8 +14,8 @@ export interface Geology {
 }
 
 export interface Images {
-  planet: string,
-  internal: string,
+  overview: string,
+  structure: string,
   geology: string
 }
 

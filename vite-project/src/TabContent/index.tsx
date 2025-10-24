@@ -7,11 +7,6 @@ import Statistics from './Statistics'
 // tipificação
 import type { PlanetProps } from '../planet'
 
-interface SectionData {
-    content: string,
-    source: string
-}
-
 interface ContentProps {
     planetDetails: PlanetProps[],
     activeTab: number
@@ -23,18 +18,14 @@ const index: React.FC<ContentProps> = ({ planetDetails, activeTab, toggleHamb })
 
     // preciso de uma explicação dessa lógica toda
     const [separateTabs, setSeparateTabs] = useState<(typeof sectionKeys)[number]>("overview");
+
     const currentPlanet = planetDetails[activeTab];
+    const imageGeology = currentPlanet?.images?.geology;
+    const currentImage = currentPlanet?.images[separateTabs === "geology" ? "overview" : separateTabs];
+    const currentSource = currentPlanet?.[separateTabs]?.source;
+    const currentContent = currentPlanet?.[separateTabs]?.content;
+
     const sectionKeys = ["overview", "structure", "geology"] as const;
-
-    const sections: Record<(typeof sectionKeys)[number], SectionData> =
-        sectionKeys.reduce((acc, key) => {
-            if (currentPlanet) {
-                acc[key] = currentPlanet[key];
-            }
-            return acc;
-        }, {} as Record<(typeof sectionKeys)[number], SectionData>);
-
-
 
     return (
         <div className='flex flex-col 
@@ -44,7 +35,7 @@ const index: React.FC<ContentProps> = ({ planetDetails, activeTab, toggleHamb })
         '>
             <nav className={
                 `desktop:hidden tablet:hidden mobile:flex justify-between gap-[2.69rem] h-[3rem] pl-[1.5rem] pr-[2.25rem] border-t-[1px] border-t-opaq-white 
-                ${toggleHamb ? 'border-b-0 border-b-opaq-white' : 'border-b-[1px] border-b-opaq-white' } `
+                ${toggleHamb ? 'border-b-0 border-b-opaq-white' : 'border-b-[1px] border-b-opaq-white'} `
             }>
                 {sectionKeys.map((key) => (
                     <button
@@ -64,13 +55,15 @@ const index: React.FC<ContentProps> = ({ planetDetails, activeTab, toggleHamb })
 
             {/* contém o nome do planeta, descrição (dependendo da tab selecionada entre as 3) e a fonte da informação */}
             <SourceP
+                currentImage={currentImage}
                 planetDetails={planetDetails}
-                sections={sections}
+                currentSource={currentSource}
+                currentContent={currentContent}
                 separateTabs={separateTabs}
                 setSeparateTabs={setSeparateTabs}
                 activeTab={activeTab}
                 sectionKeys={sectionKeys}
-                currentPlanet={currentPlanet}
+                imageGeology={imageGeology}
             />
 
             <Statistics

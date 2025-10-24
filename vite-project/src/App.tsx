@@ -17,7 +17,9 @@ function App() {
   // estado que guarda o número das tabs para transformamos o nav em um sistema dinâmico de tabs
   const [activeTab, setActiveTab] = useState<number>(0)
 
+  // estado que guarda o estado do botão para fazer o nav específico do mobile aparecer
   const [toggleHamb, setToggleHamb] = useState<boolean>(false);
+
 
   const handleMobileTabToggle = (index: any) => {
     setActiveTab(index);
@@ -25,7 +27,7 @@ function App() {
   }
 
   return (
-    <div className='bg-very-dark-blue bg-[url(assets/background-stars.svg)] w-full h-[100vh] relative pb-[3.5rem]
+    <div className='bg-very-dark-blue bg-[url(assets/background-stars.svg)] w-full desktop:h-[100vh] relative pb-[3.5rem]
     tablet:h-full
     mobile:h-full
     '>

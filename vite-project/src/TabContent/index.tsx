@@ -7,6 +7,7 @@ import Statistics from './Statistics'
 // tipificação
 import type { PlanetProps } from '../planet'
 
+
 interface ContentProps {
     planetDetails: PlanetProps[],
     activeTab: number
@@ -31,10 +32,10 @@ const index: React.FC<ContentProps> = ({ planetDetails, activeTab, toggleHamb })
         <div className='flex flex-col 
         desktop:gap-[5.44rem]
         tablet:gap-[3.5rem]
-        mobile:gap-[2rem]
+        mobile:gap-[6rem]
         '>
             <nav className={
-                `desktop:hidden tablet:hidden mobile:flex justify-between gap-[2.69rem] h-[3rem] pl-[1.5rem] pr-[2.25rem] border-t-[1px] border-t-opaq-white 
+                `desktop:hidden tablet:hidden mobile:flex justify-between gap-[2.69rem] pl-[1.5rem] pr-[2.25rem] border-t-[1px] border-t-opaq-white 
                 ${toggleHamb ? 'border-b-0 border-b-opaq-white' : 'border-b-[1px] border-b-opaq-white'} `
             }>
                 {sectionKeys.map((key) => (
@@ -42,7 +43,7 @@ const index: React.FC<ContentProps> = ({ planetDetails, activeTab, toggleHamb })
                         key={key}
                         onClick={() => setSeparateTabs(key)}
                         className={`text-opaq-white text-[0.5625rem] uppercase font-bold font-spartan cursor-pointer relative z-99 transition-all pt-[1rem] pb-[1rem]
-                            ${separateTabs === key ? `${planetDetails[activeTab]?.borderBottomColor} border-b-[4px] text-white` : 'border-0'}
+                            ${separateTabs === key ? `${planetDetails[activeTab]?.borderBottomColor} border-b-[4px] text-white` : 'border-b-[4px] border-transparent'}
                             ${toggleHamb ? 'hidden' : 'flex'}
                         `}
                     >
@@ -69,6 +70,7 @@ const index: React.FC<ContentProps> = ({ planetDetails, activeTab, toggleHamb })
             <Statistics
                 planetDetails={planetDetails}
                 activeTab={activeTab}
+                toggleHamb={toggleHamb}
             />
 
 

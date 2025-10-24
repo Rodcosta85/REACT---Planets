@@ -1,4 +1,9 @@
 import { useState } from "react"
+
+// components
+import HambBtn from './HambBtn';
+
+// assets
 import HambMenu from './../assets/icon-hamburger.svg'
 import Chevron from './../assets/icon-chevron.svg'
 
@@ -21,16 +26,7 @@ const index: React.FC<HeaderProps> = ({ planetDetails, activeTab, setActiveTab, 
         ">
             <div className="flex items-center desktop:justify-between tablet:justify-center mobile:justify-between w-full">
                 <h1 className="font-antonio text-[1.75rem] text-white tracking-[-0.065rem]">THE PLANETS</h1>
-                <button
-                    onClick={handleMobileTabToggle}
-                    className="w-[1.5rem] h-[1rem] relative z-99 desktop:hidden tablet:hidden mobile:block"
-                >
-                    <img
-                        src={HambMenu}
-                        alt="a hamburger-style menu"
-                        className=" mobile:w-[1.5rem] mobile:h-[1rem]"
-                    />
-                </button>
+                <HambBtn handleMobileTabToggle={handleMobileTabToggle} />
             </div>
 
             <nav className='desktop:flex tablet:flex flex-row gap-[2.06rem] mobile:hidden'>

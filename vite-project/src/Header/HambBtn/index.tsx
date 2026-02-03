@@ -1,9 +1,13 @@
+import usePlanets from "../../hooks/usePlanets"
+
 interface ButtonProps {
   handleMobileTabToggle: (index: any) => void,
   toggleHamb: boolean
 }
 
-const index: React.FC<ButtonProps> = ({ handleMobileTabToggle, toggleHamb }) => {
+const index: React.FC<ButtonProps> = ({ handleMobileTabToggle }) => {
+
+  const { toggleHamb } = usePlanets();
   
   return (
     <button

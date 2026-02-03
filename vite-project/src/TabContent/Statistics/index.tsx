@@ -1,4 +1,4 @@
-import React from 'react'
+import usePlanets from "../../hooks/usePlanets"
 
 interface PlanetProps {
     rotation: string,
@@ -13,7 +13,9 @@ interface StatsProps {
     toggleHamb: boolean
 }
 
-const index: React.FC<StatsProps> = ({ planetDetails, activeTab, toggleHamb }) => {
+const index: React.FC<StatsProps> = ({ planetDetails }) => {
+
+    const { toggleHamb, activeTab } = usePlanets();
 
     return (
         <div className={`

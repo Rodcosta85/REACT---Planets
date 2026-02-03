@@ -1,21 +1,19 @@
 import { useState } from 'react'
-
-// componentes
 import SourceP from '../../public'
 import Statistics from './Statistics'
-
-// tipificação
-import type { PlanetProps } from '../planet'
+import type { PlanetProps } from '../types/planet'
+import usePlanets from '../hooks/usePlanets'
 
 
 interface ContentProps {
     planetDetails: PlanetProps[],
     activeTab: number
-    setActiveTab: (arg0: number) => void,
     toggleHamb: boolean
 }
 
-const index: React.FC<ContentProps> = ({ planetDetails, activeTab, toggleHamb }) => {
+const index: React.FC<ContentProps> = ({ planetDetails }) => {
+
+    const { toggleHamb, activeTab } = usePlanets();
 
     // preciso de uma explicação dessa lógica toda
     const [separateTabs, setSeparateTabs] = useState<(typeof sectionKeys)[number]>("overview");
@@ -72,8 +70,6 @@ const index: React.FC<ContentProps> = ({ planetDetails, activeTab, toggleHamb })
             {/* são os cards com as estatísticas de cada planeta */}
             <Statistics
                 planetDetails={planetDetails}
-                activeTab={activeTab}
-                toggleHamb={toggleHamb}
             />
         </div>
 

@@ -2,7 +2,7 @@
 import SourceImg from './icon-source.svg'
 
 // importação da tipificação
-import type { PlanetProps } from '../src/planet'
+import type { PlanetProps } from '../src/types/planet'
 
 
 // tipificação das props recebidas pelo componente

@@ -1,21 +1,15 @@
-// components
 import HambBtn from './HambBtn';
-
-// assets
 import Chevron from './../../public/icon-chevron.svg'
+import type { HeaderProps } from '../types/header';
+import usePlanets from '../hooks/usePlanets';
 
-// importação da tipificação
-import type { PlanetProps } from "../planet"
 
-interface HeaderProps {
-    planetDetails: PlanetProps[],
-    activeTab: number,
-    setActiveTab: (arg0: number) => void,
-    handleMobileTabToggle: (index: any) => void,
-    toggleHamb: boolean
-}
+const Header: React.FC<HeaderProps> = ({ planetDetails, handleMobileTabToggle }) => {
 
-const index: React.FC<HeaderProps> = ({ planetDetails, activeTab, setActiveTab, handleMobileTabToggle, toggleHamb }) => {
+
+    const { toggleHamb, activeTab, setActiveTab } = usePlanets();
+
+
     return (
         <header className="flex desktop:flex-row justify-between desktop:items-start 
         desktop:justify-center desktop:h-[70px] pl-[2rem] pr-[2.56rem] desktop:pt-0 
@@ -26,22 +20,20 @@ const index: React.FC<HeaderProps> = ({ planetDetails, activeTab, setActiveTab, 
                 <h1 className="font-antonio text-[1.75rem] text-white tracking-[-0.065rem]">THE PLANETS</h1>
                 <HambBtn
                     handleMobileTabToggle={handleMobileTabToggle}
-                    toggleHamb={toggleHamb}
                 />
             </div>
             <nav className='desktop:flex tablet:flex flex-row gap-[2.06rem] mobile:hidden'>
                 {/* map para mostrar todos os nomes dos planetas e colocá-los dentro de um botão para usar o sistema de tab */}
                 {planetDetails.map((planet: any, index: number) => (
-                    <div key={index}>
-                        <button
-                            className={`transition-all duration-300 ease-in-out cursor-pointer text-white opacity-[0.6] text-[0.6875rem] font-bold font-spartan uppercase tracking-[0.0625rem] pt-[1rem] h-[100%]
+                    <button
+                        className={`transition-all duration-300 ease-in-out cursor-pointer text-white opacity-[0.6] text-[0.6875rem] font-bold font-spartan uppercase tracking-[0.0625rem] pt-[1rem] h-[100%]
                                 ${activeTab === index ? `${planetDetails[activeTab]?.borderTopColor} border-t-[4px]` : 'border-t-[4px] border-transparent'} 
                             `}
-                            onClick={() => setActiveTab(index)}
-                        >
-                            {planet.name}
-                        </button>
-                    </div>
+                        onClick={() => setActiveTab(index)}
+                        key={index}
+                    >
+                        {planet.name}
+                    </button>
                 ))}
             </nav>
 
@@ -74,4 +66,4 @@ const index: React.FC<HeaderProps> = ({ planetDetails, activeTab, setActiveTab, 
     )
 }
 
-export default index
+export default Header

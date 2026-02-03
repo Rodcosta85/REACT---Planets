@@ -23,8 +23,6 @@ function App() {
       />
       {/* conteudo de cada tab/planeta */}
       <TabContent planetDetails={planetDetails} />
-      {/* conteudo de cada tab/planeta */}
-
     </div>
   )
 }

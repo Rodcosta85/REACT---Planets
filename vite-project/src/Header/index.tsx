@@ -6,9 +6,7 @@ import usePlanets from '../hooks/usePlanets';
 
 const Header: React.FC<HeaderProps> = ({ planetDetails, handleMobileTabToggle }) => {
 
-
     const { toggleHamb, activeTab, setActiveTab } = usePlanets();
-
 
     return (
         <header className="flex desktop:flex-row justify-between desktop:items-start 

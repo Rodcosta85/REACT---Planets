@@ -7,8 +7,6 @@ import usePlanets from '../hooks/usePlanets'
 
 interface ContentProps {
     planetDetails: PlanetProps[],
-    activeTab: number
-    toggleHamb: boolean
 }
 
 const index: React.FC<ContentProps> = ({ planetDetails }) => {
@@ -62,7 +60,6 @@ const index: React.FC<ContentProps> = ({ planetDetails }) => {
                 currentContent={currentContent}
                 separateTabs={separateTabs}
                 setSeparateTabs={setSeparateTabs}
-                activeTab={activeTab}
                 sectionKeys={sectionKeys}
                 imageGeology={imageGeology}
             />

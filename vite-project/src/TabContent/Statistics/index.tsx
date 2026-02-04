@@ -9,8 +9,6 @@ interface PlanetProps {
 
 interface StatsProps {
     planetDetails: PlanetProps[],
-    activeTab: number,
-    toggleHamb: boolean
 }
 
 const index: React.FC<StatsProps> = ({ planetDetails }) => {

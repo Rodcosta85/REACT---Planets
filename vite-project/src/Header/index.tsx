@@ -1,12 +1,13 @@
 import HambBtn from './HambBtn';
-import Chevron from './../../public/icon-chevron.svg'
 import type { HeaderProps } from '../types/header';
 import usePlanets from '../hooks/usePlanets';
+import TabDesktop from '../Components/TabBtn';
+import TabMobile from '../Components/TabBtnMobile'
 
 
 const Header: React.FC<HeaderProps> = ({ planetDetails, handleMobileTabToggle }) => {
 
-    const { toggleHamb, activeTab, setActiveTab } = usePlanets();
+    const { toggleHamb } = usePlanets();
 
     return (
         <header className="flex desktop:flex-row justify-between desktop:items-start 
@@ -23,15 +24,10 @@ const Header: React.FC<HeaderProps> = ({ planetDetails, handleMobileTabToggle })
             <nav className='desktop:flex tablet:flex flex-row gap-[2.06rem] mobile:hidden'>
                 {/* map para mostrar todos os nomes dos planetas e colocá-los dentro de um botão para usar o sistema de tab */}
                 {planetDetails.map((planet: any, index: number) => (
-                    <button
-                        className={`transition-all duration-300 ease-in-out cursor-pointer text-white opacity-[0.6] text-[0.6875rem] font-bold font-spartan uppercase tracking-[0.0625rem] pt-[1rem] h-[100%]
-                                ${activeTab === index ? `${planetDetails[activeTab]?.borderTopColor} border-t-[4px]` : 'border-t-[4px] border-transparent'} 
-                            `}
-                        onClick={() => setActiveTab(index)}
-                        key={index}
-                    >
-                        {planet.name}
-                    </button>
+                    <TabDesktop
+                        planet={planet}
+                        index={index}
+                        key={planet.name} />
                 ))}
             </nav>
 
@@ -43,21 +39,11 @@ const Header: React.FC<HeaderProps> = ({ planetDetails, handleMobileTabToggle })
             `}>
                 {/* map para mostrar todos os nomes dos planetas e colocá-los dentro de um botão para usar o sistema de tab */}
                 {planetDetails.map((planet: any, index: number) => (
-                    <button
-                        key={index}
-                        className="flex justify-between items-center border-b-opaq-white border-b-[1px] border-opacity-[0.6] pb-[1.25rem] cursor-pointer"
-                        onClick={() => handleMobileTabToggle(index)}
-                    >
-                        <div className="flex gap-[1.5rem]">
-                            <div className={`w-[1.25rem] h-[1.25rem] rounded-full ${planet.color}`}></div>
-                            <h2
-                                className='text-white text-[0.9375rem] font-bold font-spartan uppercase tracking-[0.0625rem]'
-                            >
-                                {planet.name}
-                            </h2>
-                        </div>
-                        <img src={Chevron} alt="a chevron-type arrow pointing to the right" />
-                    </button>
+                    <TabMobile
+                        planet={planet}
+                        index={index}
+                        key={planet.name}
+                        handleMobileTabToggle={handleMobileTabToggle} />
                 ))}
             </nav>
         </header>

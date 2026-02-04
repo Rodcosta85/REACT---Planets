@@ -1,8 +1,6 @@
-// imagens/assets
 import SourceImg from './icon-source.svg'
-
-// importação da tipificação
 import type { PlanetProps } from '../src/types/planet'
+import usePlanets from '../src/hooks/usePlanets'
 
 
 // tipificação das props recebidas pelo componente
@@ -11,7 +9,6 @@ interface SourceProps {
     setSeparateTabs: any,
     currentSource: string;
     planetDetails: PlanetProps[]
-    activeTab: number,
     sectionKeys: ReadonlyArray<string>,
     currentImage: string;
     currentContent: string;
@@ -21,7 +18,6 @@ interface SourceProps {
 
 const index: React.FC<SourceProps> = ({
     planetDetails,
-    activeTab,
     separateTabs,
     setSeparateTabs,
     currentSource,
@@ -30,6 +26,8 @@ const index: React.FC<SourceProps> = ({
     currentContent,
     imageGeology,
 }) => {
+
+    const { activeTab } = usePlanets();
 
     return (
         <div className='flex desktop:flex-row justify-center desktop:gap-[18.69rem] desktop:pl-[1.5rem] desktop:pr-[2.25rem] desktop:pt-[7.94rem] w-[100%]

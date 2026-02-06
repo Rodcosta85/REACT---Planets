@@ -1,19 +1,17 @@
 import { useState } from 'react'
-import SourceP from '../../public'
+import SourceP from '../SourceP'
 import Statistics from './Statistics'
 import type { PlanetProps } from '../types/planet'
 import usePlanets from '../hooks/usePlanets'
-
 
 interface ContentProps {
     planetDetails: PlanetProps[],
 }
 
-const index: React.FC<ContentProps> = ({ planetDetails }) => {
+const TabContent: React.FC<ContentProps> = ({ planetDetails }) => {
 
     const { toggleHamb, activeTab } = usePlanets();
-
-    // preciso de uma explicação dessa lógica toda
+    
     const [separateTabs, setSeparateTabs] = useState<(typeof sectionKeys)[number]>("overview");
 
     const currentPlanet = planetDetails[activeTab];
@@ -69,8 +67,7 @@ const index: React.FC<ContentProps> = ({ planetDetails }) => {
                 planetDetails={planetDetails}
             />
         </div>
-
     )
 }
 
-export default index
+export default TabContent

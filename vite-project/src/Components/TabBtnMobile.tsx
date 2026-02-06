@@ -1,12 +1,8 @@
 import Chevron from './../../public/icon-chevron.svg'
-
-interface Planet {
-    color: string;
-    name: string;
-}
+import type { PlanetProps } from '../types/planet';
 
 interface TabProps {
-    planet: Planet,
+    planet: PlanetProps,
     index: number,
     handleMobileTabToggle: (index: number) => void
 }
@@ -20,9 +16,7 @@ const TabBtnMobile: React.FC<TabProps> = ({ planet, index, handleMobileTabToggle
         >
             <div className="flex gap-[1.5rem]">
                 <div className={`w-[1.25rem] h-[1.25rem] rounded-full ${planet.color}`}></div>
-                <h2
-                    className='text-white text-[0.9375rem] font-bold font-spartan uppercase tracking-[0.0625rem]'
-                >
+                <h2 className='text-white text-[0.9375rem] font-bold font-spartan uppercase tracking-[0.0625rem]'>
                     {planet.name}
                 </h2>
             </div>

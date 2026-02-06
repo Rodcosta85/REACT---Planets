@@ -1,9 +1,7 @@
-import SourceImg from './icon-source.svg'
-import type { PlanetProps } from '../src/types/planet'
-import usePlanets from '../src/hooks/usePlanets'
+import SourceImg from '../../public/icon-source.svg';
+import usePlanets from '../hooks/usePlanets'
+import type { PlanetProps } from '../types/planet';
 
-
-// tipificação das props recebidas pelo componente
 interface SourceProps {
     separateTabs: string,
     setSeparateTabs: any,
@@ -15,8 +13,7 @@ interface SourceProps {
     imageGeology: string;
 }
 
-
-const index: React.FC<SourceProps> = ({
+const SourceP: React.FC<SourceProps> = ({
     planetDetails,
     separateTabs,
     setSeparateTabs,
@@ -107,4 +104,4 @@ const index: React.FC<SourceProps> = ({
     )
 }
 
-export default index
+export default SourceP

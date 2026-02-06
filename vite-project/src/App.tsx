@@ -21,7 +21,6 @@ function App() {
         planetDetails={planetDetails}
         handleMobileTabToggle={handleMobileTabToggle}
       />
-      {/* conteudo de cada tab/planeta */}
       <TabContent planetDetails={planetDetails} />
     </div>
   )

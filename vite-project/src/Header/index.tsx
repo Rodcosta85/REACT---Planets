@@ -4,7 +4,6 @@ import usePlanets from '../hooks/usePlanets';
 import TabDesktop from '../Components/TabBtn';
 import TabMobile from '../Components/TabBtnMobile'
 
-
 const Header: React.FC<HeaderProps> = ({ planetDetails, handleMobileTabToggle }) => {
 
     const { toggleHamb } = usePlanets();
@@ -22,28 +21,28 @@ const Header: React.FC<HeaderProps> = ({ planetDetails, handleMobileTabToggle })
                 />
             </div>
             <nav className='desktop:flex tablet:flex flex-row gap-[2.06rem] mobile:hidden'>
-                {/* map para mostrar todos os nomes dos planetas e colocá-los dentro de um botão para usar o sistema de tab */}
-                {planetDetails.map((planet: any, index: number) => (
+                {planetDetails.map((planet, index) => (
                     <TabDesktop
-                        planet={planet}
                         index={index}
-                        key={planet.name} />
+                        planet={planet}
+                        key={planet.name}
+                    />
                 ))}
             </nav>
 
             {/* esse nav é somente do mobile, visto que ele tem um estilo completamente diferente do que está presente tanto no desktop como no tablet */}
             <nav className={`
-            hidden gap-[2.06rem] 
-            z-99 w-full h-[100vh] pl-[1.5rem] pr-[2.25rem] bg-very-dark-blue    
-            ${toggleHamb ? 'mobile:flex' : 'mobile:hidden'} mobile:flex-col mobile:absolute mobile:top-[6.5rem] mobile:left-0 
-            `}>
-                {/* map para mostrar todos os nomes dos planetas e colocá-los dentro de um botão para usar o sistema de tab */}
-                {planetDetails.map((planet: any, index: number) => (
+                hidden gap-[2.06rem] 
+                z-99 w-full h-[100vh] pl-[1.5rem] pr-[2.25rem] bg-very-dark-blue    
+                ${toggleHamb ? 'mobile:flex' : 'mobile:hidden'} mobile:flex-col mobile:absolute mobile:top-[6.5rem] mobile:left-0 
+                `}>
+                {planetDetails.map((planet, index) => (
                     <TabMobile
                         planet={planet}
                         index={index}
                         key={planet.name}
-                        handleMobileTabToggle={handleMobileTabToggle} />
+                        handleMobileTabToggle={handleMobileTabToggle}
+                    />
                 ))}
             </nav>
         </header>

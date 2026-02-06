@@ -1,12 +1,13 @@
 import usePlanets from "../hooks/usePlanets"
 import planetDetails from '../data.json'
+import type { PlanetProps } from "../types/planet";
 
 interface TabProps {
-    planet: string,
-    index: number
+    planet: PlanetProps;
+    index: number;
 }
 
-const Tab:React.FC<TabProps> = ({ planet, index }) => {
+const Tab: React.FC<TabProps> = ({ planet, index }) => {
 
     const { activeTab, setActiveTab } = usePlanets();
 
@@ -17,7 +18,7 @@ const Tab:React.FC<TabProps> = ({ planet, index }) => {
             `}
             onClick={() => setActiveTab(index)}
         >
-            {planet}
+            {planet.name}
         </button>
     )
 }
